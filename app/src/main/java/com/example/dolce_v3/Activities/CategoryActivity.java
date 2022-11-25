@@ -5,6 +5,8 @@ import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.TextView;
 
 import com.example.dolce_v3.Domain.CategoryDomain;
@@ -16,16 +18,18 @@ public class CategoryActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
+        this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        getSupportActionBar().hide();
         setContentView(R.layout.activity_category);
 
-//        TextView CategoryTitle;
+        TextView CategoryTitle;
         CategoryTitle = findViewById(R.id.CategoryTitle);
         object = (CategoryDomain) getIntent().getSerializableExtra("object");
-//        CategoryTitle.setText(object.getTitle());
+        CategoryTitle.setText(object.getTitle()+" Ice creams");
 
-//        recyclerView = findViewById(R.id.coneCategory);
-//        recyclerView.setLayoutManager(new GridLayoutManager(this, 2));
-
+        recyclerView = findViewById(R.id.coneCategory);
+        recyclerView.setLayoutManager(new GridLayoutManager(this, 2));
 
     }
 }
