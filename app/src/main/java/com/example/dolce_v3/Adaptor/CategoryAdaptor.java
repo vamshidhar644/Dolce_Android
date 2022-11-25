@@ -2,11 +2,13 @@ package com.example.dolce_v3.Adaptor;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.os.Parcelable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.constraintlayout.widget.ConstraintLayout;
@@ -14,13 +16,15 @@ import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
+import com.example.dolce_v3.Activities.CategoryActivity;
+import com.example.dolce_v3.Activities.ShowDetailsActivity;
 import com.example.dolce_v3.Domain.CategoryDomain;
 import com.example.dolce_v3.R;
 
 import java.util.ArrayList;
 
 public class CategoryAdaptor extends RecyclerView.Adapter<CategoryAdaptor.ViewHolder> {
-    ArrayList<CategoryDomain>categoryDomains;
+    ArrayList<CategoryDomain> categoryDomains;
 
     public CategoryAdaptor(ArrayList<CategoryDomain> categoryDomains){
         this.categoryDomains = categoryDomains;
@@ -73,6 +77,14 @@ public class CategoryAdaptor extends RecyclerView.Adapter<CategoryAdaptor.ViewHo
 
         Glide.with(holder.itemView.getContext()).load(drawableResourceId).into(holder.categoryImage);
 
+        holder.mainLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(holder.itemView.getContext(), CategoryActivity.class);
+                intent.putExtra("object", categoryDomains.get(position));
+                holder.itemView.getContext().startActivity(intent);
+            }
+        });
     }
 
     @Override

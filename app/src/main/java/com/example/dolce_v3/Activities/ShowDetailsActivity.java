@@ -17,7 +17,6 @@ import com.example.dolce_v3.R;
 import com.google.android.material.imageview.ShapeableImageView;
 
 public class ShowDetailsActivity extends AppCompatActivity {
-
     private TextView addCartBtn;
     private TextView title, price, description, quantity;
     private TextView add, sub;
