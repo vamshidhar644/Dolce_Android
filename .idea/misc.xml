@@ -12,9 +12,10 @@
         <entry key="..\:/Dolce/android/Dolce_v3/app/src/main/res/layout/activity_register.xml" value="0.17552083333333332" />
         <entry key="..\:/Dolce/android/Dolce_v3/app/src/main/res/layout/activity_show_details.xml" value="0.1" />
         <entry key="..\:/Dolce/android/Dolce_v3/app/src/main/res/layout/activity_welcome.xml" value="0.1" />
+        <entry key="..\:/Dolce/android/Dolce_v3/app/src/main/res/layout/category_list.xml" value="0.5" />
         <entry key="..\:/Dolce/android/Dolce_v3/app/src/main/res/layout/viewholder_cart.xml" value="0.17552083333333332" />
         <entry key="..\:/Dolce/android/Dolce_v3/app/src/main/res/layout/viewholder_category.xml" value="0.17552083333333332" />
-        <entry key="..\:/Dolce/android/Dolce_v3/app/src/main/res/layout/viewholder_popular.xml" value="0.15989583333333332" />
+        <entry key="..\:/Dolce/android/Dolce_v3/app/src/main/res/layout/viewholder_popular.xml" value="0.1" />
       </map>
     </option>
   </component>

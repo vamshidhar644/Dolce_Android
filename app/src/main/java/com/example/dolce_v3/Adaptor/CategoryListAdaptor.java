@@ -28,7 +28,7 @@ public class CategoryListAdaptor extends RecyclerView.Adapter<CategoryListAdapto
 
     @Override
     public CategoryListAdaptor.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View inflate = LayoutInflater.from(parent.getContext()).inflate(R.layout.viewholder_popular, parent, false);
+        View inflate = LayoutInflater.from(parent.getContext()).inflate(R.layout.category_list, parent, false);
         return new ViewHolder(inflate);
     }
 
@@ -59,16 +59,15 @@ public class CategoryListAdaptor extends RecyclerView.Adapter<CategoryListAdapto
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder{
-        TextView title, price, addBtn;
+        TextView title, price;
         ImageView popularImage;
         ConstraintLayout ConsBox;
         public ViewHolder(@NonNull View itemView){
             super(itemView);
-            title = itemView.findViewById(R.id.popularname);
-            price = itemView.findViewById(R.id.popularprice);
-            popularImage = itemView.findViewById(R.id.popularImage);
-            addBtn = itemView.findViewById(R.id.addBtn);
-            ConsBox = itemView.findViewById(R.id.popularBox);
+            title = itemView.findViewById(R.id.popularname2);
+            price = itemView.findViewById(R.id.popularprice2);
+            popularImage = itemView.findViewById(R.id.popularImage2);
+            ConsBox = itemView.findViewById(R.id.popularBox2);
         }
     }
 }

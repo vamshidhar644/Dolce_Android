@@ -10,6 +10,7 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.TextView;
 
+import com.example.dolce_v3.Adaptor.CategoryListAdaptor;
 import com.example.dolce_v3.Adaptor.PopularAdaptor;
 import com.example.dolce_v3.Domain.CategoryDomain;
 import com.example.dolce_v3.Domain.CategoryListDomain;
@@ -19,9 +20,7 @@ import com.example.dolce_v3.R;
 import java.util.ArrayList;
 
 public class CategoryActivity extends AppCompatActivity {
-//    private TextView CategoryTitle;
     private CategoryDomain object;
-//    private RecyclerView recyclerView;
 
     private RecyclerView.Adapter categoryListAdaptor;
     private RecyclerView recyclerViewCategoriesList;
@@ -35,6 +34,7 @@ public class CategoryActivity extends AppCompatActivity {
 
         TextView CategoryTitle;
         CategoryTitle = findViewById(R.id.CategoryTitle);
+
         object = (CategoryDomain) getIntent().getSerializableExtra("object");
         CategoryTitle.setText(object.getTitle()+" Ice creams");
 
@@ -42,18 +42,20 @@ public class CategoryActivity extends AppCompatActivity {
         recyclerViewCategoriesList = findViewById(R.id.ListCategory);
         recyclerViewCategoriesList.setLayoutManager(gridLayoutManager);
 
-        coneCategory();
+        category_1();
     }
 
-    private void coneCategory(){
-        ArrayList<PopularDomain> popularList = new ArrayList<>();
-        popularList.add(new PopularDomain("Vanilla", "vanilla", "Vanilla bean, vanilla ice cream is delicious on its own but it’s often the flavor of choice when serving desserts.", 45.00));
-        popularList.add(new PopularDomain("Choclate", "choclate", "Blending cocoa powder with eggs, cream, sugar, and vanilla.", 40.00));
-        popularList.add(new PopularDomain("Strawberry", "strawberry", "Strawberry flavoring, fresh strawberries blended in with eggs, cream, sugar, and vanilla.", 50.00));
-        popularList.add(new PopularDomain("Rocky Road", "rocky_road", "Chocolate ice cream, nuts, and marshmallows.", 120.00));
-        popularList.add(new PopularDomain("Queso (Cheese)", "queso", "Combination of salty, sharp, creamy, and sweet.", 45.00));
+    private void category_1(){
+        ArrayList<CategoryListDomain> cat1_List = new ArrayList<>();
+        cat1_List.add(new CategoryListDomain("Big - Belgian Chocolate", "belgian", "Bite into a rich, crunchy and chocolatey experience.", 45.00));
+        cat1_List.add(new CategoryListDomain("Raspberry Chocolate Truffle", "choclate", "A divine combination of two flavours, guaranteed to delight you.", 40.00));
 
-        categoryListAdaptor = new PopularAdaptor(popularList);
+        categoryListAdaptor = new CategoryListAdaptor(cat1_List);
         recyclerViewCategoriesList.setAdapter(categoryListAdaptor);
+    }
+
+
+    private void category_2(){
+
     }
 }
