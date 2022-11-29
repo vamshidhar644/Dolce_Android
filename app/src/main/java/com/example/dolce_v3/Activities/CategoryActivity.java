@@ -5,7 +5,9 @@ import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.TextView;
@@ -15,6 +17,7 @@ import com.example.dolce_v3.Adaptor.PopularAdaptor;
 import com.example.dolce_v3.Domain.CategoryDomain;
 import com.example.dolce_v3.Domain.CategoryListDomain;
 import com.example.dolce_v3.Domain.PopularDomain;
+import com.example.dolce_v3.MainActivity;
 import com.example.dolce_v3.R;
 
 import java.util.ArrayList;
@@ -61,7 +64,8 @@ public class CategoryActivity extends AppCompatActivity {
         }
     }
 
-    private void category_1(){
+    private void category_1()
+    {
         ArrayList<PopularDomain> cat1_List = new ArrayList<>();
         cat1_List.add(new PopularDomain("Belgian Chocolate", "belgian", "Bite into a rich, crunchy and chocolatey experience.", 45.00));
         cat1_List.add(new PopularDomain("Chocolate Truffle", "truffle", "A divine combination of two flavours, guaranteed to delight you.", 40.00));
@@ -149,5 +153,13 @@ public class CategoryActivity extends AppCompatActivity {
 
         categoryListAdaptor = new PopularAdaptor(cat1_List);
         recyclerViewCategoriesList.setAdapter(categoryListAdaptor);
+    }
+
+    public void goTOHome(View view) {
+        startActivity(new Intent(CategoryActivity.this, MainActivity.class));
+    }
+
+    public void goToCart(View view) {
+        startActivity(new Intent(CategoryActivity.this, CartActivity.class));
     }
 }

@@ -78,7 +78,8 @@ public class CartActivity extends AppCompatActivity {
         double itemTotal = manageCart.getTotalPrice();
 
         totalPriceTxt.setText("Rs. "+itemTotal);
-        taxTxt.setText("Rs. "+tax);
+        double a = Math.round(tax *100)/100;
+        taxTxt.setText("Rs. "+a);
         deliveryTxt.setText("Rs. "+delivery);
         totalTxt.setText("Rs. "+total);
     }
