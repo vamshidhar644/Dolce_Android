@@ -222,7 +222,7 @@
     <androidx.coordinatorlayout.widget.CoordinatorLayout
         android:layout_width="match_parent"
         android:layout_height="100dp"
-        app:layout_constraintBottom_toBottomOf="@id/scrollview"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
 
@@ -230,11 +230,11 @@
             android:id="@+id/app_bar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
             android:backgroundTint="#f6f6f6"
             app:fabCradleMargin="8dp"
             app:fabCradleRoundedCornerRadius="50dp"
-            app:fabCradleVerticalOffset="6dp"
-            android:layout_gravity="bottom">
+            app:fabCradleVerticalOffset="6dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -275,7 +275,7 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="0.2"
-                    android:orientation="vertical"/>
+                    android:orientation="vertical" />
 
                 <LinearLayout
                     android:id="@+id/supportBtn"
@@ -315,9 +315,9 @@
             android:layout_height="wrap_content"
             android:backgroundTint="#1b7add"
             android:elevation="3dp"
-            app:layout_anchor="@id/app_bar"
             android:src="@drawable/shopping_cart"
             android:tooltipText=""
+            app:layout_anchor="@id/app_bar"
             app:maxImageSize="30dp"
             app:tint="#ffffff"
             tools:ignore="SpeakableTextPresentCheck">
@@ -325,6 +325,7 @@
         </com.google.android.material.floatingactionbutton.FloatingActionButton>
 
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
