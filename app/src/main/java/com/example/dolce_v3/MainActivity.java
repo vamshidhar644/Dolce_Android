@@ -49,6 +49,7 @@ public class MainActivity extends AppCompatActivity {
         recyclerViewCategoryList.setLayoutManager(linearLayoutManager);
 
         ArrayList<CategoryDomain> categories = new ArrayList<>();
+
         categories.add(new CategoryDomain("Cone", "cat_1"));
         categories.add(new CategoryDomain("Stick", "cat_2"));
         categories.add(new CategoryDomain("Scoops", "cat_3"));
