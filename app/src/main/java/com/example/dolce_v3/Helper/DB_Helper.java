@@ -9,7 +9,6 @@ import android.database.sqlite.SQLiteOpenHelper;
 public class DB_Helper extends SQLiteOpenHelper {
 
     public static final String DBName = "Users.db";
-
     public DB_Helper(Context context) {
         super(context, "Users.db", null, 1);
     }
