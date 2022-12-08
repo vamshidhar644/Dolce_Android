@@ -69,14 +69,6 @@ public class ShowDetailsActivity extends AppCompatActivity {
         if(numberOrder>1){
             numberOrder -= 1;
         }
-//        else{
-//            builder.setTitle("Are you sure ?").setMessage("Do you want to remove the item").setCancelable(true).setPositiveButton("Remove", new DialogInterface.OnClickListener() {
-//                @Override
-//                public void onClick(DialogInterface dialogInterface, int i) {
-//
-//                }
-//            }).show();
-//        }
         quantity.setText(String.valueOf(numberOrder));
     }
 
